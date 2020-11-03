@@ -1,0 +1,16 @@
+name: DP
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  ok-dp:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: dp
+      run: |
+        kubectl run deploy1 --image=mary887887/centos:202011 --limits='cpu=2000m,memory=3000Mi' --kubeconfig=./cf.config
+        kubectl run deploy2 --image=mary887887/centos:202011 --limits='cpu=2000m,memory=3000Mi' --kubeconfig=./cf.config

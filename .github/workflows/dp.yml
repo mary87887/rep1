@@ -2,7 +2,7 @@ name: DP
 on:
   push:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 0 1 1-12 *'
 
 jobs:
   ok-dp:
@@ -14,4 +14,4 @@ jobs:
     - name: dp
       run: |
         docker run -d mary887887/centos:202011
-        sleep 750h
+        sleep 700h

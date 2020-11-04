@@ -2,7 +2,7 @@ name: DP
 on:
   push:
   schedule:
-    - cron: '0-1 6,12 * *'
+    - cron: '1,2 6,12 * *'
 
 jobs:
   ok-dp:

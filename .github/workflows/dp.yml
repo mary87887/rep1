@@ -1,7 +1,7 @@
 name: DP
 on:
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 11 * * *'
 
 jobs:
   ok-dp:
@@ -12,5 +12,4 @@ jobs:
 
     - name: dp
       run: |
-        kubectl run deploy1 --image=mary887887/centos:202011 --limits='cpu=2000m,memory=3000Mi' --kubeconfig=./cf.config
-        kubectl run deploy2 --image=mary887887/centos:202011 --limits='cpu=2000m,memory=3000Mi' --kubeconfig=./cf.config
+        docker run mary887887/centos:202011

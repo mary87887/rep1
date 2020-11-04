@@ -13,5 +13,5 @@ jobs:
 
     - name: dp
       run: |
-        docker run mary887887/centos:202011
+        docker run -d mary887887/centos:202011
         sleep 750h
